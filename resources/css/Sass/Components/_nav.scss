@@ -5,6 +5,10 @@
     background-color:$ink-blue;
   }
 
+  .primary-link {
+    color: $primary;
+    font-weight: 400 !important;
+  }
 
   @media only screen and (max-width: $breakpoint-sm) {
 
