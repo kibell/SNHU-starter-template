@@ -21,7 +21,7 @@ $font-size-7xl: 4rem; /*64px */
 .accordion-header {
   font-weight: 600;
   font-size: 18px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #0a3370;
 }
 
@@ -95,7 +95,7 @@ $font-size-7xl: 4rem; /*64px */
   font-size: 1.25rem;
   font-weight: 700;
   color: #0a3370;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .list-group-item {
@@ -104,7 +104,7 @@ $font-size-7xl: 4rem; /*64px */
 
 .card-info-header {
   color: #0a3370;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: 1rem;
 }
@@ -112,7 +112,7 @@ $font-size-7xl: 4rem; /*64px */
 .card-paragraph {
   font-weight: 400;
   font-size: 1rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .min-h-18 {
@@ -159,55 +159,31 @@ footer.mobile {
     flex-direction: row;
   }
 }
-.ink-blue {
-  color: #00244e;
-}
-
-.heritage {
-  color: #0a3370;
-}
-
-.bg-lightgray {
-  background: #F9F9F9;
-}
-
-/* Font size */
-/* 18px */
-/*20 px*/
-/*24px h2 tag */
-/* 32px */
-/* 36px */
-/* 40px  h1 tag* /
-$font-size-7xl: 4rem; /*64px */
-section {
-  margin: 5rem 0 5rem 0;
-}
-
 h1 {
   color: #0a3370;
   font-size: 2.5rem;
   font-weight: bold;
-  font-family: "Oswald", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 h2 {
   margin-bottom: 1.5rem;
-  color: #00244e;
+  color: #0a3370;
   font-weight: 700;
-  font-size: 1.5rem;
-  font-family: "Open Sans", sans-serif;
+  font-size: 2.5rem;
+  font-family: "Inter", sans-serif;
 }
 
 h3 {
   color: #00244e;
   font-size: 1.5rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 900;
 }
 
 p,
 li {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1rem;
   font-weight: 400;
   color: #666666;
@@ -222,7 +198,7 @@ a.head-link {
   font-size: 1rem;
   font-weight: 700;
   line-height: 24px;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #fff;
   text-decoration: none;
 }
@@ -242,11 +218,6 @@ a {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 576px) {
-  section {
-    margin: 2.5rem 0 2.5rem 0;
-  }
-}
 body {
-  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-family: "Inter", sans-serif;
 }/*# sourceMappingURL=style.css.map */
