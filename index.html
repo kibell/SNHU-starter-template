@@ -110,26 +110,45 @@ ENDIF
   <!-- Header + Nav -->
 
   <header>
-    <nav class="navbar navbar-expand-lg p-3 bg-heritage">
+      <nav class="countdown-nav navbar navbar-expand-lg p-3 navbar-bg-white ">
       <div class="container">
         <a class="navbar-brand" href="https://www.snhu.edu/">
           <img
-            src="https://client-data.knak.io/production/email_assets/5fd10b569d941/Y9PaAR4BN1uvwQSeUR37Jtdwa2YUrN1By1RZIsk8.png"
-            alt="SNHU Logo" height="80">
+          class="logo-blue-text"
+            alt="SNHU Logo" height="80" />
         </a>
-        <div class=" justify-content-end" id="navbarNavAltMarkup">
-          <div class="navbar-nav ">
-            <a href="Tel:8883870861" class="nav-link head-link mx-3 " target="_blank">Call</a>
+       <div class="d-flex  align-items-center mt-3 countdown-wrapper">
+      <div >
+        <h2 id="countdown-headline" >Next Term Starts in:  
+        </h2>
+      </div>
+      <div id="countdown">
+        <span id="nextTermStartDate" class="d-none"> 4/26/2026 12:00:00 AM</span>
+        <ul>
+          <li>
+            <span id="days"></span>Days
+          </li>
+          <li>
+            <span id="hours"></span>Hours
+          </li>
+          <li>
+            <span id="minutes"></span>Minutes
+          </li>
+        </ul>
+      </div>
+    </div>
+        <div class=" justify-content-end"  id="navbarNavAltMarkup">
+          <div class="navbar-nav d-flex">
+            <a href="Tel:8883870861" class="nav-link mx-3 " target="_blank">Call</a>
             <a href="sms:21216" class="nav-link head-link mx-3" target="_blank">Text</a>
             <a href="mailto:admissions@snhu.edu" class="nav-link head-link mx-3" target="_blank">Email</a>
-
           </div>
         </div>
       </div>
     </nav>
   </header>
 
-  <!---Meet the New SNHU Term Names-->
+ 
 
   <div class="meet-div text-center d-flex justify-content-center align-items-center">
   </div>
@@ -177,3 +196,48 @@ ENDIF
       </div>
     </div>
   </footer>
+
+  <!--  Countdown scripts -->
+  <script>
+      function calculateCountdown(targetDate) {
+        // This will give us the current date and time as of right now
+        var currentDate = new Date();
+        // Calculate the time difference between the target date that is ref in ampscript and current date
+        var timeDifference = targetDate - currentDate;
+        // Calculate days, hours, minutes, and seconds
+        var days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        // Return the countdown as an object to make it easier for us to use in other functions
+        return {
+          days: days,
+          hours: hours,
+          minutes: minutes,
+          seconds: seconds
+        };
+      }
+      function updateCountdownDisplay() {
+        var dateElement = document.getElementById('nextTermStartDate');
+        var dateString = dateElement.innerText;
+        var targetDate = new Date(dateString);
+        var countdown = calculateCountdown(targetDate);
+        // Update the inner HTML of elements with respective ids
+        document.getElementById('days').innerHTML = countdown.days;
+        document.getElementById('hours').innerHTML = countdown.hours;
+        document.getElementById('minutes').innerHTML = countdown.minutes;
+        document.getElementById('seconds').innerHTML = countdown.seconds;
+        // Check if the target date is reached
+        if (countdown.days <= 0 && countdown.hours <= 0 && countdown.minutes <= 0 && countdown.seconds <= 0) {
+          document.getElementById('countdown-headline').innerHTML = "You’re on your way!";
+          document.getElementById("countdown").style.display = "none";
+        }
+      }
+      // Call the updateCountdownDisplay function to update the display initially
+      updateCountdownDisplay();
+      // Update the display every second (1000 milliseconds)
+      setInterval(updateCountdownDisplay, 1000);
+    </script>
+  </body>
+
+</html>

@@ -81,7 +81,7 @@ h1,h2,h3,h4,h5,h6 {
 p { margin-top: 0; margin-bottom: 1rem; }
 
 /* Links */
-a { color: var(--color-link); text-decoration: underline; }
+a { font-weight: 600;}
 a:hover { text-decoration: none; }
 
 /* Form elements inherit typography */
@@ -209,17 +209,48 @@ a.text-link, .text-link a { color: var(--color-link); text-decoration: underline
 a.text-link:hover, .text-link a:hover { text-decoration-thickness: 2px; }
 
 /* Components */
+/* /LOGO */
 
+.logo-blue-text {
+  content: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/ad04e6c8-a5bc-49df-97a9-03bc057431f3.png)
+}
+
+.logo-white-text {
+   content: url(https://client-data.knak.io/production/email_assets/5fd10b569d941/Y9PaAR4BN1uvwQSeUR37Jtdwa2YUrN1By1RZIsk8.png)
+}
 /* ---------- Nav / Navbar ---------- */
 .nav{display:flex;flex-wrap:wrap;padding-left:0;margin-bottom:0;list-style:none;}
 .nav-item{display:block;}
-.nav-link{display:block;padding:0.5rem 1rem;text-decoration:none;background:none;border:0;cursor:pointer;transition:color 0.2s ease-in-out,background-color 0.2s ease-in-out;}
+.nav-link{display:block;font-weight: 700; padding:0.5rem 1rem;text-decoration:none;background:none;border:0;cursor:pointer;transition:color 0.2s ease-in-out,background-color 0.2s ease-in-out;}
 .nav-link:hover{text-decoration:none;}
 .nav-link.disabled{pointer-events:none;opacity:0.5;}
 .navbar>.container,.navbar>.container-fluid,.navbar>.container-lg,.navbar>.container-md,.navbar>.container-sm,.navbar>.container-xl,.navbar>.container-xxl{display:flex;flex-wrap:inherit;align-items:center;justify-content:space-between;flex-direction:column;}
 .navbar-expand-lg .navbar-nav{flex-direction:row; display: flex;}
-@media (min-width: 768px){ .navbar>.container { flex-direction: row; }}
+.navbar-bg-white > * {color: var(--color-heritage); a {color: var(--color-heritage)}}
+.navbar-bg-blue > * {color: var(--color-white); a {color: var(--color-white)}}
 
+/* Countdown nav */
+.countdown-nav > .container { flex-direction: column !important; }
+
+.countdown-nav #countdown ul { display: flex; flex-direction: row; justify-content: space-evenly; text-align: center; align-items: center; }
+
+.countdown-nav #countdown li { font-size: 1.2rem; font-weight: 500; list-style-type: none; padding: 1.2rem; }
+
+.countdown-nav #countdown li span { display: block; font-size: 1.25rem; }
+
+.countdown-nav #days,
+.countdown-nav #hours,
+.countdown-nav #minutes,
+.countdown-nav #seconds,
+.countdown-nav #countdown li { font-size: 1rem; }
+
+.countdown-nav #days,
+.countdown-nav #hours,
+.countdown-nav #minutes,
+.countdown-nav #seconds { color: var(--color-btn-primary); }
+
+@media (min-width: 1200px){ .countdown-nav>.container { flex-direction: row !important;  }}
+@media (min-width: 768px){ .navbar>.container { flex-direction: row; }}
 
 /* ---------- Accordion (Bootstrap-like naming) ---------- */
 .accordion.accordion-flush{border-top:1px solid var(--color-border);}.accordion.accordion-flush .accordion-item{border-bottom:1px solid var(--color-border);}.accordion-header{margin:0;font-weight:600;font-size:18px;font-family:"Inter",sans-serif;color:var(--color-heritage);}
