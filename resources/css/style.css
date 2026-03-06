@@ -47,13 +47,16 @@
   /* Border radius */
   --brdr-20-tr-bl-radius: 0 20px 0 20px;
   --brdr-20-tl-br-radius:  20px 0 20px 0;
+  --brdr-rad-20: 20px;
 
   /* Box shadow */
   --box-shadow-1: 13px 16px 21px rgba(0, 0, 0, 0.6);
+  --gold-shadow: -24px 32px var(--color-btn-primary);
 
 
   /* Image vars */
-  --banner-image-1: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/40ff1247-9ea2-4cec-9b17-ff863c8ae54e.gif)
+  --banner-image-1: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/40ff1247-9ea2-4cec-9b17-ff863c8ae54e.gif);
+  --gold-rounded-square: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/e6eb6400-15a4-4b03-a952-080e6f508c96.png)
   }
 
   /* Global box model */
@@ -213,7 +216,59 @@ h1,h2,h3,h4,h5,h6,p { margin: 0 0 1rem; }
 .mx-0{margin-left:0!important;margin-right:0!important;}.mx-1{margin-left:var(--space-1)!important;margin-right:var(--space-1)!important;}.mx-2{margin-left:var(--space-2)!important;margin-right:var(--space-2)!important;}.mx-3{margin-left:var(--space-3)!important;margin-right:var(--space-3)!important;}.mx-4{margin-left:var(--space-4)!important;margin-right:var(--space-4)!important;}.mx-5{margin-left:var(--space-5)!important;margin-right:var(--space-5)!important;}
 .my-0{margin-top:0!important;margin-bottom:0!important;}.my-1{margin-top:var(--space-1)!important;margin-bottom:var(--space-1)!important;}.my-2{margin-top:var(--space-2)!important;margin-bottom:var(--space-2)!important;}.my-3{margin-top:var(--space-3)!important;margin-bottom:var(--space-3)!important;}.my-4{margin-top:var(--space-4)!important;margin-bottom:var(--space-4)!important;}.my-5{margin-top:var(--space-5)!important;margin-bottom:var(--space-5)!important;}
 .m-auto{margin:auto!important;}.mx-auto{margin-left:auto!important;margin-right:auto!important;}.my-auto{margin-top:auto!important;margin-bottom:auto!important;}.mt-auto{margin-top:auto!important;}.mb-auto{margin-bottom:auto!important;}.ml-auto{margin-left:auto!important;}.mr-auto{margin-right:auto!important;}
+/*  Mobile margins */
+@media (max-width: 768px){
 
+.m-m-0{margin:0!important;}
+.m-m-1{margin:var(--space-1)!important;}
+.m-m-2{margin:var(--space-2)!important;}
+.m-m-3{margin:var(--space-3)!important;}
+.m-m-4{margin:var(--space-4)!important;}
+.m-m-5{margin:var(--space-5)!important;}
+
+.mt-m-0{margin-top:0!important;}
+.mt-m-1{margin-top:var(--space-1)!important;}
+.mt-m-2{margin-top:var(--space-2)!important;}
+.mt-m-3{margin-top:var(--space-3)!important;}
+.mt-m-4{margin-top:var(--space-4)!important;}
+.mt-m-5{margin-top:var(--space-5)!important;}
+
+.mb-m-0{margin-bottom:0!important;}
+.mb-m-1{margin-bottom:var(--space-1)!important;}
+.mb-m-2{margin-bottom:var(--space-2)!important;}
+.mb-m-3{margin-bottom:var(--space-3)!important;}
+.mb-m-4{margin-bottom:var(--space-4)!important;}
+.mb-m-5{margin-bottom:var(--space-5)!important;}
+
+.ml-m-0{margin-left:0!important;}
+.ml-m-1{margin-left:var(--space-1)!important;}
+.ml-m-2{margin-left:var(--space-2)!important;}
+.ml-m-3{margin-left:var(--space-3)!important;}
+.ml-m-4{margin-left:var(--space-4)!important;}
+.ml-m-5{margin-left:var(--space-5)!important;}
+
+.mr-m-0{margin-right:0!important;}
+.mr-m-1{margin-right:var(--space-1)!important;}
+.mr-m-2{margin-right:var(--space-2)!important;}
+.mr-m-3{margin-right:var(--space-3)!important;}
+.mr-m-4{margin-right:var(--space-4)!important;}
+.mr-m-5{margin-right:var(--space-5)!important;}
+
+.mx-m-0{margin-left:0!important;margin-right:0!important;}
+.mx-m-1{margin-left:var(--space-1)!important;margin-right:var(--space-1)!important;}
+.mx-m-2{margin-left:var(--space-2)!important;margin-right:var(--space-2)!important;}
+.mx-m-3{margin-left:var(--space-3)!important;margin-right:var(--space-3)!important;}
+.mx-m-4{margin-left:var(--space-4)!important;margin-right:var(--space-4)!important;}
+.mx-m-5{margin-left:var(--space-5)!important;margin-right:var(--space-5)!important;}
+
+.my-m-0{margin-top:0!important;margin-bottom:0!important;}
+.my-m-1{margin-top:var(--space-1)!important;margin-bottom:var(--space-1)!important;}
+.my-m-2{margin-top:var(--space-2)!important;margin-bottom:var(--space-2)!important;}
+.my-m-3{margin-top:var(--space-3)!important;margin-bottom:var(--space-3)!important;}
+.my-m-4{margin-top:var(--space-4)!important;margin-bottom:var(--space-4)!important;}
+.my-m-5{margin-top:var(--space-5)!important;margin-bottom:var(--space-5)!important;}
+
+}
 /* ---------- Width / Height ---------- */
 .w-0{width:0!important;}.w-25{width:25%!important;}.w-50{width:50%!important;}.w-75{width:75%!important;}.w-100{width:100%!important;}.w-auto{width:auto!important;}
 .h-0{height:0!important;}.h-25{height:25%!important;}.h-50{height:50%!important;}.h-75{height:75%!important;}.h-100{height:100%!important;}.h-auto{height:auto!important;}
@@ -236,6 +291,27 @@ h1,h2,h3,h4,h5,h6,p { margin: 0 0 1rem; }
    MAX HEIGHT
 ========================================================= */
 .max-h-0{max-height:0!important;}.max-h-25{max-height:25%!important;}.max-h-50{max-height:50%!important;}.max-h-75{max-height:75%!important;}.max-h-100{max-height:100%!important;}.max-h-auto{max-height:auto!important;}
+/* =========================================================
+   WORD BREAK / TEXT WRAP UTILITIES
+========================================================= */
+
+/* Normal wrapping */
+.text-wrap{white-space:normal!important;}
+
+/* Prevent wrapping */
+.text-nowrap{white-space:nowrap!important;}
+
+/* Break long words if needed */
+.text-break{overflow-wrap:break-word!important;word-break:break-word!important;}
+
+/* Force breaking anywhere (very aggressive) */
+.text-break-all{word-break:break-all!important;}
+
+/* Prevent breaking words */
+.text-keep{word-break:keep-all!important;}
+
+/* Hyphenation when breaking */
+.text-hyphen{hyphens:auto!important;overflow-wrap:break-word!important;}
 /* ---------- Typography ---------- */
 .fw-light { font-weight: 300 !important; }
 .fw-normal { font-weight: 400 !important; }
@@ -372,6 +448,18 @@ h1,h2,h3,h4,h5,h6,p { margin: 0 0 1rem; }
 .border-lightgray { border-color: var(--color-lightgray) !important; }
 .border-white { border-color: var(--color-white) !important; }
 
+/* Border Radius */
+
+.brdr-rad-20 {
+  border-radius: var(--brdr-rad-20);
+}
+
+/* Box Shadow */
+
+.gold-shadow {
+  box-shadow: var(--gold-shadow);
+}
+
 /* Optional: link styling helper */
 a.text-link, .text-link a { color: var(--color-link); text-decoration: underline; }
 a.text-link:hover, .text-link a:hover { text-decoration-thickness: 2px; }
@@ -442,6 +530,8 @@ a.text-link:hover, .text-link a:hover { text-decoration-thickness: 2px; }
       background-image: var(--banner-image-1);
     }
 
+
+    /* Card styles  */
     .rounded-card {
       padding: var(--space-5);
       box-shadow: var(--box-shadow-1);
@@ -449,6 +539,8 @@ a.text-link:hover, .text-link a:hover { text-decoration-thickness: 2px; }
       justify-content: center;
       flex-direction: column;
     }
+
+    /*  Radius */
        .rad-tr-bl {
       border-radius:var(--brdr-20-tr-bl-radius);
     }
@@ -456,3 +548,11 @@ a.text-link:hover, .text-link a:hover { text-decoration-thickness: 2px; }
     .rad-tl-br {
       border-radius:var(--brdr-20-tl-br-radius);
     } 
+
+    iframe {
+
+      &:after {
+        background-image: var(--gold-rounded-square);
+      }
+
+    }
