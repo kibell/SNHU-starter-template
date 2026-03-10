@@ -9,6 +9,7 @@
     --color-link: var(--color-btn-primary);
     --color-lightgray: #F9F9F9;
     --color-sky: #00559A;
+    --color-lightblue: #E6F0F7;
     --color-white: #ffffff;
     --color-text: #1f2937;
     --color-muted: #374151;
@@ -31,12 +32,12 @@
     --container-lg: 960px;
     --container-xl: 1140px;
     --container-xxl: 1320px;
-    --heritage-brdr: 2px solid var(--color-heritage);
+    --number-card-brdr: 3px solid var(--color-heritage);
 
     /* Typography */
   --font-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
---fs-xs:0.75rem; --fs-sm:0.875rem; --fs-base:1rem; --fs-md:1.125rem; --fs-lg:1.25rem; --fs-xl:1.5rem; --fs-2xl:1.75rem; --fs-3xl:2rem; --fs-4xl:2.5rem;
+--fs-xs:0.75rem; --fs-sm:0.875rem; --fs-base:1rem; --fs-md:1.125rem; --fs-lg:1.25rem; --fs-xl:1.5rem; --fs-2xl:1.75rem; --fs-3xl:2rem; --fs-4xl:2.5rem ; --fs-5xl:3rem;
   --body-font-family: var(--font-sans-serif);
   --body-font-size: 1rem;
   --body-font-weight: 400;
@@ -46,9 +47,10 @@
   --body-bg: var(--color-white);
 
   /* Border radius */
-  --brdr-20-tr-bl-radius: 0 20px 0 20px;
-  --brdr-20-tl-br-radius:  20px 0 20px 0;
+  --brdr-tr-bl-radius: 0 30px 0 30px;
+  --brdr-tl-br-radius:  30px 0 30px 0;
   --brdr-rad-20: 20px;
+  --brdr-rad-40: 40px;
 
   /* Box shadow */
   --box-shadow-1: 13px 16px 21px rgba(0, 0, 0, 0.6);
@@ -70,6 +72,15 @@
   --number-3-icon: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/b7eae9a1-435e-4b97-90f0-415d56a14592.png);
   --number-4-icon: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/fcec9366-c4e8-432a-b34f-fa329f36cdce.png);
   --number-5-icon: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/0f9cd4be-8a69-48a4-846d-aa50aa2f7b21.png);
+
+  --academic-icon: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/f4083947-7a2e-476a-b060-6b7438d68d55.png);
+  --campus-acc-icon: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/07a70c02-8b3f-4949-a10e-25c1ec76aa92.png);
+  --wellness-icon: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/0884faa4-48d0-476f-b182-8cdc75c171b3.png);
+  --career-icon: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/7798b2b4-b8e4-4ee9-bdae-c630f4bce131.png);
+  --wolak-icon: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/4af941a3-dd8a-4a72-8651-2db292673915.png);  
+  --public-safety-icon: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/23d4f835-f47b-4a38-b7b0-fde7c4433fa6.png);  
+  --residence-life-icon: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/91a1861d-3c22-4806-b6a3-3b1014a05959.png); 
+  --employment-icon: url(https://image.dream.snhu.edu/lib/fe9213737461067576/m/1/dafa583c-7367-4fd3-902b-337c6fc76d75.png);
 
   }
 
@@ -107,12 +118,15 @@ h1,h2,h3,h4,h5,h6 {
   line-height: 1.2;
 }
 
+h1 { font-size: var(--fs-5xl); } h2{ font-size: var(--fs-4xl); font-weight: 700; } h3 { font-size: var(--fs-xl); } h4 { font-size: var(--fs-lg); } h5 { font-size: var(--fs-md); } h6 { font-size: var(--fs-sm); }
+
 /* Paragraph */
 p { margin-top: 0; margin-bottom: 1rem; }
 
 /* Links */
 a { font-weight: 600;}
 a:hover { text-decoration: none; }
+
 
 /* Form elements inherit typography */
 button,input,optgroup,select,textarea {
@@ -409,9 +423,21 @@ h1,h2,h3,h4,h5,h6,p { margin: 0 0 1rem; }
 .text-2xl { font-size: var(--fs-2xl) !important; }
 .text-3xl { font-size: var(--fs-3xl) !important; }
 .text-4xl { font-size: var(--fs-4xl) !important; }
+.text-5xl { font-size: var(--fs-5xl) !important; }
+
+.text-decoration-none { text-decoration: none !important; } 
+.text-decoration-underline { text-decoration: underline !important; }
 /* ---------- Links ---------- */
 .text-link-drk{color:var(--color-link);text-decoration:underline;}.text-link-drk:hover{text-decoration-thickness:2px;}
-
+.link-dark-blue {
+  color: var(--color-ink-blue) !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+.link-unset {
+  color: unset !important;
+  text-decoration: underline !important;
+}
 /* ---------- Card helpers ---------- */
 .card-col{display:flex;}.card-col>.card{flex:1;}.card{background:var(--color-white);border-radius:var(--radius-card);box-shadow:var(--shadow-card);padding:1.25rem;}
 
@@ -431,6 +457,7 @@ h1,h2,h3,h4,h5,h6,p { margin: 0 0 1rem; }
 .flex-row{flex-direction:row!important;}.flex-row-reverse{flex-direction:row-reverse!important;}.flex-column{flex-direction:column!important;}.flex-column-reverse{flex-direction:column-reverse!important;}.flex-fill{flex:1 1 auto!important;}
 .justify-content-start{justify-content:flex-start!important;}.justify-content-end{justify-content:flex-end!important;}.justify-content-center{justify-content:center!important;}.justify-content-between{justify-content:space-between!important;}.justify-content-around{justify-content:space-around!important;}.justify-content-evenly{justify-content:space-evenly!important;}
 .align-items-start{align-items:flex-start!important;}.align-items-end{align-items:flex-end!important;}.align-items-center{align-items:center!important;}.align-items-baseline{align-items:baseline!important;}.align-items-stretch{align-items:stretch!important;}
+.align-content-start{align-content:flex-start!important;}.align-content-end{align-content:flex-end!important;}.align-content-center{align-content:center!important;}.align-content-between{align-content:space-between!important;}.align-content-around{align-content:space-around!important;}.align-content-stretch{align-content:stretch!important;}
 .align-self-start{align-self:flex-start!important;}.align-self-end{align-self:flex-end!important;}.align-self-center{align-self:center!important;}.align-self-stretch{align-self:stretch!important;}
 .flex-wrap{flex-wrap:wrap!important;}.flex-nowrap{flex-wrap:nowrap!important;}.flex-wrap-reverse{flex-wrap:wrap-reverse!important;}
 /* =========================================================
@@ -525,6 +552,7 @@ h1,h2,h3,h4,h5,h6,p { margin: 0 0 1rem; }
 .bg-white { background-color: var(--color-white) !important; }
 .bg-gold { background-color: var(--color-btn-primary) !important; }
 .bg-sky{ background-color: var(--color-sky) !important; color: var(--color-white);}
+.bg-light-blue { background-color: var(--color-lightblue) !important; color: var(--color-heritage); }
 
 /* Border color utilities */
 .border-ink-blue { border-color: var(--color-ink-blue) !important; }
@@ -595,7 +623,7 @@ a.text-link:hover, .text-link a:hover { text-decoration-thickness: 2px; }
 
 /* ---------- Accordion (Bootstrap-like naming) ---------- */
 .accordion.accordion-flush{border-top:1px solid var(--color-border);}.accordion.accordion-flush .accordion-item{border-bottom:1px solid var(--color-border);}.accordion-header{margin:0;font-weight:600;font-size:18px;font-family:"Inter",sans-serif;color:var(--color-heritage);}
-.accordion-button{width:100%;text-align:left;background:transparent;border:0;padding:1rem 0.75rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+.accordion-button{width:100%;text-align:left;background:transparent;border:0;padding:1rem 0.75rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem; color: var(--color-ink-blue); font-size: var(--fs-lg);}
 .accordion-button:focus-visible{outline:2px solid var(--color-focus);outline-offset:2px;}
 .accordion-button::after{content:"+";font-weight:700;line-height:1;}
 .accordion-button:not(.collapsed)::after{content:"–";}
@@ -620,18 +648,36 @@ a.text-link:hover, .text-link a:hover { text-decoration-thickness: 2px; }
     }
 
     /* Card styles  */
-    .rounded-card {
+    .card {
       padding: var(--space-5);
       box-shadow: var(--box-shadow-1);
       display: flex;
       justify-content: center;
       flex-direction: column;
     }
+
+    .rounded-card {
+      padding: var(--space-5);
+      border-radius: var(--brdr-rad-40);
+      border: 1px solid var(--color-border);
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex-grow: 1;
+      gap: var(--space-4);
+
+      a {
+        color: unset;
+        text-decoration: underline;
+      }
+    }
     
     .number-card {
       padding: var(--space-4);
       border-radius: var(--brdr-rad-20);
-      border: var(--heritage-brdr);
+      border: var(--number-card-brdr);
       height: 13rem;
       align-content: center;
       justify-items: center;
@@ -649,18 +695,18 @@ a.text-link:hover, .text-link a:hover { text-decoration-thickness: 2px; }
 
     /*  Radius */
        .rad-tr-bl {
-      border-radius:var(--brdr-20-tr-bl-radius);
+      border-radius:var(--brdr-tr-bl-radius);
     }
 
     .rad-tl-br {
-      border-radius:var(--brdr-20-tl-br-radius);
+      border-radius:var(--brdr-tl-br-radius);
     } 
 
 
     /* TODO Box Styles */
 
     .todo-wrapper {
-          display: grid;
+    display: grid;
     grid-template-columns: minmax(0, 8rem) 2fr 1fr;
     grid-template-rows: auto;
     align-items: center;
@@ -715,8 +761,61 @@ a.text-link:hover, .text-link a:hover { text-decoration-thickness: 2px; }
 
     }
 
-.d-grid-col-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-4);
+
+.upcoming-date-table{
+  width: 100%;
+  border-collapse: collapse;
+
+  td {
+    font-size: var(--fs-xl);
+    padding: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+}
+
+
+.info-icon {
+  width: 5.5rem;
+  height: 5.5rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+  &.academic {
+     background-image: var(--academic-icon);
+  }
+  &.campus {
+     background-image: var(--campus-acc-icon);
+  }
+  
+  &.wellness {
+     background-image: var(--wellness-icon);
+  }
+
+  &.career {
+     background-image: var(--career-icon);
+    }
+
+    &.wolak {
+     background-image: var(--wolak-icon);
+    }
+
+    &.public {
+     background-image: var(--public-safety-icon);
+    } 
+
+    &.residence {
+     background-image: var(--residence-life-icon);
+    }
+
+    &.involvement {
+     background-image: var(--todo-star-icon);
+    }
+
+    &.employment {
+     background-image: var(--employment-icon);
+    }
 }
