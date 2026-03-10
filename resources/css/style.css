@@ -536,7 +536,7 @@ h1,h2,h3,h4,h5,h6,p { margin: 0 0 1rem; }
 .btn-primary:hover{background-color:var(--color-btn-primary-hover);border-color:var(--color-btn-primary-hover);color:var(--color-heritage);}
 .btn-secondary{background-color:var(--color-btn-secondary);border-color:var(--color-btn-secondary);color:var(--color-white);}
 .btn-secondary:hover{background-color:var(--color-white);border-color:var(--color-white);color:var(--color-heritage);}
-
+.btn-no-outline{background-color:transparent;border-color:transparent;color:var(--color-heritage); pointer-events: none;}
 /* Text color utilities */
 .text-ink-blue { color: var(--color-ink-blue) !important; }
 .text-heritage { color: var(--color-heritage) !important; }
